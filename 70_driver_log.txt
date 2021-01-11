@@ -1,0 +1,92 @@
+2021/01/11 11:03:37 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/info
+2021/01/11 11:03:37 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+[2021-01-11T11:03:38.705386] Entering context manager injector.
+[context_manager_injector.py] Command line Options: Namespace(inject=['ProjectPythonPath:context_managers.ProjectPythonPath', 'RunHistory:context_managers.RunHistory', 'TrackUserError:context_managers.TrackUserError'], invocation=['train.py', '--C', '0.001', '--max_iter', '50'])
+Script type = None
+Starting the daemon thread to refresh tokens in background for process with pid = 102
+Entering Run History Context Manager.
+/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/urllib3/util/retry.py:439: DeprecationWarning: Using 'method_whitelist' with Retry is deprecated and will be removed in v2.0. Use 'allowed_methods' instead
+  DeprecationWarning,
+[2021-01-11T11:03:42.638636] Current directory: /mnt/batch/tasks/shared/LS_root/jobs/ws-capstone/azureml/hd_a8d03af8-b754-47be-9022-3d9cb81f0fae_3/mounts/workspaceblobstore/azureml/HD_a8d03af8-b754-47be-9022-3d9cb81f0fae_3
+[2021-01-11T11:03:42.638744] Preparing to call script [train.py] with arguments:['--C', '0.001', '--max_iter', '50']
+[2021-01-11T11:03:42.638796] After variable expansion, calling script [train.py] with arguments:['--C', '0.001', '--max_iter', '50']
+
+Starting the daemon thread to refresh tokens in background for process with pid = 102
+
+
+[2021-01-11T11:03:43.319142] The experiment failed. Finalizing run...
+/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/urllib3/util/retry.py:439: DeprecationWarning: Using 'method_whitelist' with Retry is deprecated and will be removed in v2.0. Use 'allowed_methods' instead
+  DeprecationWarning,
+Cleaning up all outstanding Run operations, waiting 900.0 seconds
+1 items cleaning up...
+Cleanup took 0.0477139949798584 seconds
+Starting the daemon thread to refresh tokens in background for process with pid = 102
+Traceback (most recent call last):
+  File "/mnt/batch/tasks/shared/LS_root/jobs/ws-capstone/azureml/hd_a8d03af8-b754-47be-9022-3d9cb81f0fae_3/mounts/workspaceblobstore/azureml/HD_a8d03af8-b754-47be-9022-3d9cb81f0fae_3/azureml-setup/context_manager_injector.py", line 206, in execute_with_context
+    runpy.run_path(sys.argv[0], globals(), run_name="__main__")
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "train.py", line 30, in <module>
+    ds = TabularDatasetFactory.from_delimited_files('heart.csv')
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/_loggerfactory.py", line 129, in wrapper
+    return func(*args, **kwargs)
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 313, in from_delimited_files
+    dataflow = dataprep().read_csv(_validate_and_normalize_path(path),
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 925, in _validate_and_normalize_path
+    raise invalid_path_error
+azureml.exceptions._azureml_exception.UserErrorException: UserErrorException:
+	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore."
+    }
+}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 30, in <module>
+    ds = TabularDatasetFactory.from_delimited_files('heart.csv')
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/_loggerfactory.py", line 129, in wrapper
+    return func(*args, **kwargs)
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 313, in from_delimited_files
+    dataflow = dataprep().read_csv(_validate_and_normalize_path(path),
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 925, in _validate_and_normalize_path
+    raise invalid_path_error
+UserScriptException: UserScriptException:
+	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.
+	InnerException UserErrorException:
+	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore."
+    }
+}
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore."
+    }
+}
+
+[2021-01-11T11:03:43.505976] Finished context manager injector with Exception.
+2021/01/11 11:03:44 Failed to parse control script error: /mnt/batch/tasks/workitems/49fd32f2-878a-4fef-a34a-2fb937a700d8/job-1/hd_a8d03af8-b754-47b_188a1fc4-2ba3-44e9-97d0-93bc8e1a11ea/wd/runTaskLetTask_error.json to json File /mnt/batch/tasks/workitems/49fd32f2-878a-4fef-a34a-2fb937a700d8/job-1/hd_a8d03af8-b754-47b_188a1fc4-2ba3-44e9-97d0-93bc8e1a11ea/wd/runTaskLetTask_error.json doesn't exist
+2021/01/11 11:03:44 Failed to run the wrapper cmd with err: exit status 1
+2021/01/11 11:03:44 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+2021/01/11 11:03:44 mpirun version string: {
+Intel(R) MPI Library for Linux* OS, Version 2018 Update 3 Build 20180411 (id: 18329)
+Copyright 2003-2018 Intel Corporation.
+}
+2021/01/11 11:03:44 MPI publisher: intel ; version: 2018
+2021/01/11 11:03:44 Process Exiting with Code:  1
