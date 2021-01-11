@@ -1,0 +1,19 @@
+2021-01-11 13:07:05.196 - INFO - 5155 - azureml.train.automl.automlconfig._start_execution:207 - Submitting remote.
+2021-01-11 13:16:59.750 - INFO - 5155 - azureml.train.automl.automlconfig._start_execution:207 - Submitting remote.
+2021-01-11 13:21:09.741 - INFO - 5155 - azureml.train.automl.automlconfig._start_execution:207 - Submitting remote.
+2021-01-11 13:28:07.537 - INFO - 5225 - azureml.train.automl.automlconfig._start_execution:207 - Submitting remote.
+2021-01-11 13:59:27.992 - INFO - 5225 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-01-11 13:59:28.025 - INFO - 5225 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-01-11 13:59:28.045 - INFO - 5225 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-01-11 13:59:28.152 - INFO - 5225 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=106.86[ms]
+2021-01-11 13:59:28.152 - INFO - 5225 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=126.29[ms]
+2021-01-11 13:59:28.158 - INFO - 5225 - azureml.train.automl._model_download_utilities._log_activity:54 - ActivityStarted: DownloadModel
+2021-01-11 13:59:48.219 - INFO - 5225 - azureml.automl.runtime.distributed.utilities.horovod_initialized:58 - Horovod not found in current environment. Distribution via Horovod will be disabled.
+2021-01-11 13:59:53.178 - INFO - 5225 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping enabled: False
+2021-01-11 13:59:53.178 - INFO - 5225 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping timeout: 86400
+2021-01-11 13:59:53.526 - INFO - 5225 - azureml.train.automl._model_download_utilities._log_activity:92 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=25367.78[ms]
+2021-01-11 13:59:53.527 - INFO - 5225 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=25534.53[ms]
+2021-01-11 14:01:41.271 - INFO - 5225 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping enabled: False
+2021-01-11 14:01:41.271 - INFO - 5225 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping timeout: 86400
+2021-01-11 14:02:15.472 - INFO - 5225 - azureml.automl.runtime.shared.memory_utilities._is_low_memory:208 - Total ram: 7308169216 bytes, Current Available memory: 4663533568 bytes. Low memory threshold: 0.5
+2021-01-11 14:02:35.955 - INFO - 5225 - azureml.automl.runtime.shared.memory_utilities._is_low_memory:208 - Total ram: 7308169216 bytes, Current Available memory: 4661657600 bytes. Low memory threshold: 0.5
