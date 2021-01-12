@@ -176,5 +176,5 @@ Screenshots for the successfully deployed model and the service request as follo
 
 
 ## Screen Recording
-Screencast: https://youtu.be/wr60_2W8pRg
+Screencast: https://youtu.be/_v2aGXwdlKE
 A script is included in the Github folder.
