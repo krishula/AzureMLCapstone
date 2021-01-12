@@ -76,9 +76,11 @@ According to microsoft documentation, some other parameters that can also be use
   - enable_dnn: Tells the run whether to include DNN based models during model selection. The default is False.
 
 ### Results
-Our best auto ml model had an accuracy of 85%. 
+Our auto ml model has an accuracy of 92%.
+
+![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Screen%20Shot%202021-01-11%20at%209.06.49%20PM.png)
+
 Parameters: 
-  - Accuracy - 85.12%
   - AUC_macro - 91.96%
   - AUC_micro - 91.63%
   - AUC_weighted - 91.96%
