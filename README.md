@@ -113,7 +113,6 @@ Following are screenshots of the `RunDetails` widget as well as a screenshot of 
 ![alt txt](https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/AutoML8.png)
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
 We have created a logistic-regression model from scikit-learn and used hyperparameters 'Inverse of Regularization Strength' and 'Maximum number of iterations to converge' for parameter sampling. The sampling method used is RandomSampling which supports both discrete and continuous values. In this sampling method, the values are selected randomly from a defined search space. It also supports early termination of low-performance runs. 
 Early stopping policy used is Bandit Policy which takes care of the computational efficiency.
@@ -139,22 +138,41 @@ Other parameters that can also be used are:
   - run_config: It's the object for setting up configuration for script/notebook runs.
   - pipeline: It's the pipeline object for setting up configuration for pipeline runs. The pipeline object will be called with the sample hyperparameters to submit pipeline runs.
 
-
-
-
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+Hyperdrive run produced a best model with 87% accuracy.
+Parameters of the model were:
+  - Inverse of Regularization Strength, C = 0.61
+  - Maximum number of iterations to converge, max_iter = 1200
+Model can be improved by using a less aggressive early stopping policy and Gridsampling for parameter sampling since it uses all the possible values from the search space.
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+Following are screenshots of the `RunDetails` widget as well as a screenshot of the best model:
+
+**Run Details**
+
+![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive1.png)
+
+![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive2.png)
+
+**Best Model**
+
+![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive3.png)
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+We decide dto deploy the best Auto-ml Model. We registered and then deployed it by creating score.py and using it in inference_cofig.
+The model endpoint was queried by sending a post request to the model over the REST url.
+Screenshots for the successfully deployed model and the service request as follows:
+
+**Deployed Mode**
+
+![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive4.png)
+![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive5.png)
+
+**Service Request**
+
+![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive6.png)
+
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
-
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+Screencast: https://youtu.be/wr60_2W8pRg
+A script is included in the Github folder.
