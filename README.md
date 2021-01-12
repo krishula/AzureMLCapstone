@@ -40,7 +40,7 @@ It consists of 303 individuals data. There are 14 columns in the dataset, which 
 
 ### Task
 
-We applied Machine Learning approaches using Auto ML and Azure ML SDK fto classify whether a person is suffering from heart disease or not. We also determined the best model, deployed and used it to see how the model is working.
+We applied Machine Learning approaches using Auto ML and Hyperparameter sampling to classify whether a person is suffering from heart disease or not. We also determined the best model, deployed and used it to see how the model is working.
 The dataset consists of 13 features and we used all of them for the task.
 
 ### Access
