@@ -189,10 +189,14 @@ Screenshots for the successfully deployed model and the service request as follo
 
 **Deployed Mode**
 
+Here is a shot of the deployed model. We have used scrpit.py with inference.config to do this.
+
 ![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive4.png)
 ![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive5.png)
 
 **Service Request**
+
+Here is a shot of the request made to the web service and how it returned the value [1], which implies the model is running and our test patient has a heart disease.
 
 ![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive6.png)
 
