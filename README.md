@@ -156,11 +156,20 @@ Hyperdrive run produced a best model with 87% accuracy.
 Parameters of the model were:
   - Inverse of Regularization Strength, C = 0.61
   - Maximum number of iterations to converge, max_iter = 1200
-Model can be improved by using a less aggressive early stopping policy and Gridsampling for parameter sampling since it uses all the possible values from the search space.
-
+  
+### Future Improvements
+  - Model can be improved by using a less aggressive early stopping policy like truncation stopping policy. It cancels a percentage of lowest performing runs at each evaluation interval. Runs are compared using the primary metric. This can help up the number of models with higher accuracy.
+  - We can use Gridsampling instead of random sampling since it uses all the possible values from the search space. It might get us a model with even better accuracy.
+  - Data denoising can also be performed to cut down on the values for the datasets that might deviate the models from better accuracies. 
+  - We can try using the timeit() function to test out how fast the models respond to network deployments and result outputs.
+  
 Following are screenshots of the `RunDetails` widget as well as a screenshot of the best model:
 
 **Run Details**
+
+After configuring auto ml we submit the run.
+remote_run = experiment.submit(automl_config, show_output = True)
+We have flagged "show_output" = True to see the details as shown below. 
 
 ![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive1.png)
 
@@ -171,9 +180,10 @@ Following are screenshots of the `RunDetails` widget as well as a screenshot of 
 ![alt txt] (https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/Hyperdrive3.png)
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
-We decide dto deploy the best Auto-ml Model. We registered and then deployed it by creating score.py and using it in inference_cofig.
+
+We decide to deploy the best Auto-ml Model. We registered and then deployed it by creating score.py and using it in inference_cofig.
 The model endpoint was queried by sending a post request to the model over the REST url.
+**resp = requests.post(scoring_uri, test_sample, headers=headers)**
 Screenshots for the successfully deployed model and the service request as follows:
 
 **Deployed Mode**
