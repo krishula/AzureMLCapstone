@@ -96,19 +96,30 @@ Following are screenshots of the `RunDetails` widget as well as a screenshot of 
 
 **Best Model**
 
+Auto ML run created many models as we can see in the scrren shots below. The best model is "Voting Ensemble" with an accuarcy of 85%.
+
 ![alt txt](https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/AutoML3.png)
 
 ![alt txt](https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/AutoML4.png)
 
 **Best Model Parameters**
 
+Other than accuracy we found the following parameter values as shown in the screenshot below:
+  - AUC_macro - 91.96%
+  - AUC_micro - 91.63%
+  - AUC_weighted - 91.96%
+
 ![alt txt](https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/AutoML5.png)
 
 **Best model and run_id**
 
+Here are the details of the best model, such as run id:
+
 ![alt txt](https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/AutoML6.png)
 
 **Fitted Model - Best Estimator from the model**
+
+Here is a sneak peek of the fitted model, we can see the hyperparameters our auto ml model has generated:
 
 ![alt txt](https://github.com/krishula/AzureMLCapstone/blob/main/Screenshots/AutoML7.png)
 
