@@ -84,6 +84,7 @@ Parameters:
   - AUC_macro - 91.96%
   - AUC_micro - 91.63%
   - AUC_weighted - 91.96%
+
 The model could be improved by leaving out one or two features that might not be as helpful. More data cleaning and prep before running the automl can achieve that. Another thing that can help is running the automl for longer than the current settings.
 
 Following are screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters:
@@ -158,8 +159,8 @@ Parameters of the model were:
   - Maximum number of iterations to converge, max_iter = 1200
   
 ### Future Improvements
-  - Model can be improved by using a less aggressive early stopping policy like truncation stopping policy. It cancels a percentage of lowest performing runs at each evaluation interval. Runs are compared using the primary metric. This can help up the number of models with higher accuracy.
-  - We can use Gridsampling instead of random sampling since it uses all the possible values from the search space. It might get us a model with even better accuracy.
+  - Auto ML Model can be improved by using a less aggressive early stopping policy like truncation stopping policy. It cancels a percentage of lowest performing runs at each evaluation interval. Runs are compared using the primary metric. This can help up the number of models with higher accuracy.
+  - For Hyperdrive run, we can use Gridsampling instead of random sampling since it uses all the possible values from the search space. It might get us a model with even better accuracy.
   - Data denoising can also be performed to cut down on the values for the datasets that might deviate the models from better accuracies. 
   - We can try using the timeit() function to test out how fast the models respond to network deployments and result outputs.
   
